@@ -22,9 +22,11 @@ const readingList = function (arr) {
   let result = '';
   for (let i = 0; i < arr.length; i++) {
     let obj = arr[i];
-
-    for (let key in obj) {
-      result = result + key + '' + obj[key] + ', ';
+    let book = `${obj.title} by ${obj.author}`;
+    if (obj.readingStatus) {
+      console.log(`already read ${book}`);
+    } else {
+      console.log(`Still need to read ${book}`);
     }
   }
 
