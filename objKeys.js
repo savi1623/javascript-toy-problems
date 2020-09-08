@@ -10,6 +10,7 @@ const objKeys = function (obj) {
   let string = '';
 
   for (let key in obj) {
+    console.log(key.length - 1);
     string += `${key}, `;
   }
   return string;
